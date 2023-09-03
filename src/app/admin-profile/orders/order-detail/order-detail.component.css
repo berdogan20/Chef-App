@@ -1,0 +1,17 @@
+.container{
+    padding: 0.4rem;
+    margin: 1.5rem 0;
+    border: 1px solid #eaeaf6;
+    min-height: fit-content;
+}
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.container p{
+    color: teal;
+    padding-left: 0.15rem;
+}

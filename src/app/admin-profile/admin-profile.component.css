@@ -1,0 +1,29 @@
+.container .row{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.75rem;
+    padding-left: 30%;
+}
+
+.container .row ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.container .row ul li a {
+    padding: 0.4rem 1.2rem;
+    margin: 0.6rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #86BDF6;
+}
+
+#orders:hover, #categories:hover{
+    color: #fff;
+    background-color: #e6f2ff;
+    border: 1px solid #e6f2ff;
+}

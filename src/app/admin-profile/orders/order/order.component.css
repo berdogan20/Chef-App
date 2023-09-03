@@ -1,0 +1,14 @@
+.list-group-item.clearfix{
+    border: 1px solid #B1B2FF;
+    border-radius: 1rem;
+    cursor: pointer;
+    min-height: fit-content;
+    padding: 0.4rem;
+    margin: 1.5rem 0;
+}
+
+.list-group-item.clearfix:hover{
+    border: 1px solid #B1B2FF;
+    background-color: #f4f4ff;
+    border: 1px solid #B1B2FF;
+}

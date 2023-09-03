@@ -1,0 +1,29 @@
+<!-- <p>food-item works!</p> -->
+
+
+<div class="card" style="width: 100%; height: 35rem; margin-bottom: 1.2rem;">
+    
+    <img [src]=  "food.imageUrl"
+    class="card-img-top">
+
+    
+    <small>  {{ food.preperationTime }} minutes </small>
+    <small> $ {{ food.price }} </small>
+    <div class="card-body">
+      
+        <h5 class="card-title"> {{ food.name }}</h5>
+      
+        <p class="card-text"> {{ food.description }} </p>
+     
+        <div class="button-row">
+            <button 
+                class="food-item-button" 
+                id= "basket-button"
+                (click)="onAddToBasket()">
+                Add to basket
+            </button>
+        </div>
+    
+    </div>
+
+</div>

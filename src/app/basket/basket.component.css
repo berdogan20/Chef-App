@@ -1,0 +1,72 @@
+
+.card{
+    width: 60%;
+    margin: 1rem 0;
+    border: 1px solid rgb(218, 225, 218);
+    border-radius: 1.5rem;
+}
+
+.row{
+    border-radius: 1.5rem ;
+}
+
+img{
+    padding: 0.4rem;
+    border-radius: 1rem;
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.quantity-btn {
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid  rgb(13, 73, 73);;
+    cursor: pointer;
+}
+
+.quantity-btn:hover{
+    background-color:  rgb(13, 73, 73);;
+    color: aliceblue;
+}
+
+#remove {
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid  rgb(13, 73, 73);;
+    cursor: pointer;
+}
+
+#remove:hover{
+    background-color:  rgb(13, 73, 73);;
+    color: aliceblue;
+}
+
+#buy{
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid  rgb(13, 73, 73);;
+    cursor: pointer;
+}
+
+
+#buy:hover{
+    background-color:  rgb(13, 73, 73);;
+    color: aliceblue;
+}
+
+.order-card{
+    margin: 2rem;
+    width: 80%;
+}

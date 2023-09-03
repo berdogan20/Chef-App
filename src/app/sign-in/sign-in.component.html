@@ -1,0 +1,75 @@
+<header>
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input 
+            type="email" 
+            name="email"
+            class="form-control" 
+            id="email" 
+            placeholder="Enter email"
+            ngModel
+            required
+            email
+            #email="ngModel">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <br>
+        <span class="help-block form-text text-muted" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+      </div>
+
+      <br>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+            type="password" 
+            name="password"
+            class="form-control" 
+            id="password"
+            placeholder="Password"
+            ngModel required password>
+      </div>
+      
+      <br>
+      
+      <div class="form-group form-check">
+        <input 
+            type="checkbox" 
+            name="checkbox"
+            class="form-check-input" 
+            id="checkbox"
+            ngModel
+            required>
+        <label class="form-check-label" for="checkbox">Check me out</label>
+      </div>
+      <br>
+      
+      <button 
+          type="submit" 
+          class="btn btn-primary"
+          [disabled]="!myForm.valid">
+          Sign in
+      </button>
+      <br>
+      <small 
+          *ngIf="incorrectPassword"
+          class="form-text text-muted" style=" color: hsl(0, 78%, 75%)!important">
+            inccorect password
+      </small>
+
+      <small 
+          *ngIf="noSuchEmail"
+          class="form-text text-muted" style="color: hsl(0, 78%, 75%)!important">
+            no such email
+      </small>
+
+      <br>
+
+      <small class="form-text text-muted">You do not have an account? Do you want to create one? <button routerLinkActive="active" routerLink="/register" id="register">Register</button></small>
+  
+  </form>
+</div>
+
+</header>

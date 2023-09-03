@@ -1,0 +1,32 @@
+
+
+.food-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.food-list .food-item{
+    width: 25%;
+    text-align: center;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .food-list.food-item {
+      width: 50%; 
+    }
+  }
+
+  @media (max-width: 500px) {
+    .food-list.food-item {
+      width: 100%; 
+    }
+  }

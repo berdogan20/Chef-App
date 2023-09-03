@@ -1,0 +1,38 @@
+<!-- <p>Header component works!</p> -->
+
+<header>
+    <div class="container">
+      
+        <nav id="navbar">
+        <a href="#" id="navbar-logo" routerLinkActive="active" routerLink="menu">Chef</a>
+        <!-- before sign in -->
+        
+        <ul *ngIf="!dataService.admin && dataService.currentUser == null">
+          <li><a href="#" id="signin-button" routerLinkActive="active" routerLink="sign-in">Sign in</a></li>
+          <li><a href="#" id="register-button" routerLinkActive="active" routerLink="register">Register</a></li>
+          <li><a href="#" id="shopping-button" routerLinkActive="active" routerLink="basket"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+
+        <!-- after sign in to user -->
+        <ul *ngIf="dataService.currentUser != null">
+          <li><a id="profile-button" routerLinkActive="active" routerLink="user-profile">My profile</a></li>
+          <li><a id="logout-button" (click)="redirectToMenu()">Log out</a></li>
+          <li><a id="shopping-button" routerLinkActive="active" routerLink="basket"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul> 
+
+        <!-- after sign in to admin -->
+        <ul *ngIf="dataService.admin">
+          <li><a id="logout-button" (click)="redirectToMenu()">Log out</a></li>
+        </ul>
+
+      </nav>
+
+      <nav id="slogan">
+        <h1>
+            <b>Food</b> you love <br>
+            from <b>your favorite </b>chef
+        </h1>
+      </nav>
+
+    </div>
+  </header>

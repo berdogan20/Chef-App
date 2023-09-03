@@ -1,0 +1,78 @@
+<!-- <p>register works!</p> -->
+
+<header>
+  <div class="container">
+
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-group ">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            name="email"
+            class="form-control" 
+            id="email" 
+            placeholder="Enter email"
+            ngModel
+            required
+            email
+            #email="ngModel">
+        </div>
+        
+        <div class="form-group ">
+          <label for="password">Password</label>
+          <input 
+            type="password" 
+            name="password"
+            class="form-control" 
+            id="password"
+            placeholder="Password"
+            ngModel required password>
+        </div>    
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea 
+            name="address" 
+            class="form-control" 
+            id="address" 
+            placeholder="Enter your address"
+            ngModel required>
+        </textarea>
+      </div>
+
+        
+      <div class="form-check">
+        <input 
+            type="checkbox" 
+            name="checkbox"
+            class="form-check-input" 
+            id="checkbox"
+            ngModel
+            required>
+        <label class="form-check-label" for="gridCheck">
+            Check me out
+        </label>
+      </div>
+
+      
+      <br>
+      <button 
+          type="submit" 
+          class="btn btn-primary"
+          [disabled]="!myForm.valid">
+          Sign up
+      </button>
+
+      <br>
+      <small 
+          *ngIf="userAlreadyExists"
+          class="form-text text-muted" style=" color: hsl(0, 78%, 75%)!important">
+            This email adress already exists.
+      </small>
+
+    
+    </form>
+
+  </div>
+</header>

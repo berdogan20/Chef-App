@@ -1,0 +1,10 @@
+<!-- <p>food-list works!</p> -->
+<header>
+    <div class="container">
+        <div class="food-list">
+            <div class="food-item" *ngFor="let food of getFoods()">
+                <app-food-item [food] = "food"></app-food-item>
+            </div>
+        </div>
+    </div>
+</header>
